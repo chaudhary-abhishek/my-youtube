@@ -1,15 +1,16 @@
 import React from 'react'
 import SideBar from './SideBar'
-import MainContainer from './MainContainer'
+
+import { Outlet } from 'react-router-dom'
 
 const Body = () => {
   return (
-    <div className='flex'>
-      <div className='w-1/5'>
+    <div className='grid grid-flow-col'>
+      <div className='col-span-2'>
       <SideBar />
       </div>
-      <div className='w-4/5'>
-      <MainContainer />
+      <div className='col-span-10 px-12 mx-auto my-4'>
+      <Outlet />
       </div>
     
     
