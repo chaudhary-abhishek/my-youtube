@@ -5,7 +5,7 @@ const ButttonList = () => {
   return (
     <div>
       {
-        buttons.map((category)=><button className='px-4 py-1 m-2 rounded-lg font-medium text-sm bg-gray-200'>{category}</button>)
+        buttons.map((category)=><button key={category} className='px-4 py-1 m-2 rounded-lg font-medium text-sm bg-gray-200'>{category}</button>)
       }
     </div>
   )
