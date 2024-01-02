@@ -49,8 +49,8 @@ const Header = () => {
       </div>
 
       <div className="grid grid-flow-col w-1/2">
-        <input className="w-full px-6 py-2 border border-gray-600 rounded-l-full col-span-11" type="text" placeholder="Search" value={searchText} onChange={searchInputChangeHandler} />
-        <button className="border border-gray-600 rounded-r-full col-span-1">🔍</button>
+        <input className="hidden sm:block w-full px-6 py-2 border border-gray-600 rounded-l-full col-span-11 " type="text" placeholder="Search" value={searchText} onChange={searchInputChangeHandler} />
+        <button className="sm:border rounded-r-full col-span-1  border-gray-600">🔍</button>
       </div>
 
       <div className="flex">
