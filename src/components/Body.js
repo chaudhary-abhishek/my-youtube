@@ -2,9 +2,13 @@ import React from 'react'
 import SideBar from './SideBar'
 
 import { Outlet } from 'react-router-dom'
+import Header from './Header'
 
 const Body = () => {
   return (
+    <div>
+      <Header />
+   
     <div className='grid grid-flow-col'>
       <div className='col-span-2'>
       <SideBar />
@@ -15,6 +19,8 @@ const Body = () => {
     
     
     </div>
+    </div>
+   
    
   )
 }

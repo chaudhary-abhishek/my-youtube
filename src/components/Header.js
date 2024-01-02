@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
 import { YOUTUBE_SEARCH_SUGGESTION_API } from "../utils/constant";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [searchText, setSearchText] = useState("");
@@ -42,10 +43,14 @@ const Header = () => {
           alt="hamburger"
           src="https://cdn.iconscout.com/icon/free/png-256/free-hamburger-menu-462145.png"
         />
-        <img
+       
+       <Link to="/">
+        <img className="w-24"
           alt="youtube-logo"
           src="https://p7.hiclipart.com/preview/674/324/923/youtube-logo-music-video-computer-icons-youtube-logo.jpg"
         />
+       </Link>
+    
       </div>
 
       <div className="grid grid-flow-col w-1/2">
