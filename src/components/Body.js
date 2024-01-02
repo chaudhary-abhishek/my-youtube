@@ -9,7 +9,7 @@ const Body = () => {
       <div className='col-span-2'>
       <SideBar />
       </div>
-      <div className='col-span-10 px-12 mx-auto my-4'>
+      <div className='col-span-10 px-8 my-4 mx-8'>
       <Outlet />
       </div>
     

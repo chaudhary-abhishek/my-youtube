@@ -15,7 +15,7 @@ const VideoContainer = () => {
     setVideoList(json.items);
   }
   return (
-    <div className='flex flex-wrap w-full'>
+    <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4'>
       {
         videoList.map((video)=><VideoCard key={video.id} data={video} />)
       }

@@ -7,3 +7,5 @@
 - Configured react-router-dom and created route for this app
 - Implemeted watch route, now we can see video by clicking over it
 - Understood the working of useSearchParams
+
+# Started implementing debouncing
