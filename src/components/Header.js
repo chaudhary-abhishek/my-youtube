@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const [searchText, setSearchText] = useState("");
   const [searchSuggestion, setSearchSuggestion] = useState([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
   
   const dispatch = useDispatch();
 
@@ -62,7 +63,7 @@ const Header = () => {
       </div>
 
       <div className="grid grid-flow-col w-1/2">
-        <input className="hidden sm:block w-full px-6 py-2 border border-gray-600 rounded-l-full col-span-11 " type="text" placeholder="Search" value={searchText} onChange={searchInputChangeHandler} />
+        <input className="hidden sm:block w-full px-6 py-2 border border-gray-600 rounded-l-full col-span-11 " type="text" placeholder="Search" value={searchText} onChange={searchInputChangeHandler} onFocus={()=>setShowSuggestions(true)} onBlur={()=>setShowSuggestions(false)}/>
         <button className="sm:border rounded-r-full col-span-1  border-gray-600">🔍</button>
       
       </div>
@@ -76,7 +77,7 @@ const Header = () => {
     </div>
     <div className="hidden sm:block w-2/5 mx-[240px] md:mx-[280px] lg:mx-[360px] xl:mx-[380px] absolute shadow-xl bg-white rounded-lg list-none">
       {
-        searchSuggestion.map((suggestion)=><li className="cursor-pointer p-1">🔍{" "+suggestion}</li>)
+       showSuggestions && searchSuggestion.map((suggestion)=><li className=" p-1 hover:bg-gray-200">🔍{" "+suggestion}</li>)
       }
     </div>
     </div>
